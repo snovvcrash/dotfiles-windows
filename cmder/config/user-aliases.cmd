@@ -15,8 +15,13 @@ vi=vim $*
 cmderr=cd /d "%CMDER_ROOT%"
 
 ;= rem Custom settings
+
+;= rem Directories
 l=ls -lah --color $*
+
+;= rem Python virtualenvwrapper-win
 ;= rem python=winpty python.exe
-mkvirtualenv=mkvirtualenv.bat
-rmvirtualenv=rmvirtualenv.bat
-workon=workon.bat
+mkvirtualenv=mkvirtualenv.bat $*
+rmvirtualenv=rmvirtualenv.bat $*
+workon=workon.bat $*
+deactivate=deactivate.bat
