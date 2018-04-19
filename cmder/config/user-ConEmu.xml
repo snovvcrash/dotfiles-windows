@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <key name="Software">
 	<key name="ConEmu">
-		<key name=".Vanilla" modified="2018-04-18 13:10:44" build="180206">
+		<key name=".Vanilla" modified="2018-04-19 22:17:19" build="180206">
 			<value name="ColorTable00" type="dword" data="00222827"/>
 			<value name="ColorTable01" type="dword" data="009e5401"/>
 			<value name="ColorTable02" type="dword" data="0004aa74"/>
@@ -126,8 +126,8 @@
 			<value name="ConWnd Width" type="dword" data="00000094"/>
 			<value name="ConWnd Height" type="dword" data="00000044"/>
 			<value name="Cascaded" type="hex" data="01"/>
-			<value name="ConWnd X" type="long" data="645"/>
-			<value name="ConWnd Y" type="long" data="146"/>
+			<value name="ConWnd X" type="long" data="550"/>
+			<value name="ConWnd Y" type="long" data="108"/>
 			<value name="16bit Height" type="ulong" data="0"/>
 			<value name="AutoSaveSizePos" type="hex" data="01"/>
 			<value name="IntegralSize" type="hex" data="00"/>
@@ -291,7 +291,7 @@
 			<value name="MinimizeOnLoseFocus" type="hex" data="00"/>
 			<value name="DisableFarFlashing" type="hex" data="00"/>
 			<value name="DisableAllFlashing" type="hex" data="00"/>
-			<value name="FindText" type="string" data=""/>
+			<value name="FindText" type="string" data="twitter"/>
 			<value name="FindMatchCase" type="hex" data="00"/>
 			<value name="FindMatchWholeWords" type="hex" data="00"/>
 			<value name="FindTransparent" type="hex" data="01"/>
@@ -670,7 +670,7 @@
 			<value name="StatusBar.Hide.Dpi" type="hex" data="01"/>
 			<value name="TabFlashChanged" type="long" data="8"/>
 			<value name="TabModifiedSuffix" type="string" data="[*]"/>
-			<key name="HotKeys" modified="2018-04-17 19:35:31" build="180206">
+			<key name="HotKeys" modified="2018-04-19 22:17:19" build="180206">
 				<value name="KeyMacroVersion" type="hex" data="02"/>
 				<value name="Multi.Modifier" type="dword" data="00000011"/>
 				<value name="Multi.ArrowsModifier" type="dword" data="0000005b"/>
@@ -711,7 +711,7 @@
 				<value name="Multi.Scroll" type="dword" data="00000000"/>
 				<value name="Multi.GroupInput" type="dword" data="00005d47"/>
 				<value name="Multi.Detach" type="dword" data="00000000"/>
-				<value name="Multi.Close" type="dword" data="00001157"/>
+				<value name="Multi.Close" type="dword" data="00000000"/>
 				<value name="CloseTabKey" type="dword" data="00000000"/>
 				<value name="CloseGroupKey" type="dword" data="00000000"/>
 				<value name="CloseGroupPrcKey" type="dword" data="00000000"/>
@@ -738,7 +738,7 @@
 				<value name="Multi.ShowTabsList2" type="dword" data="00000000"/>
 				<value name="ClipboardVkAllLines" type="dword" data="0000102d"/>
 				<value name="ClipboardVkFirstLine" type="dword" data="00001156"/>
-				<value name="DeleteWordToLeft" type="dword" data="00001108"/>
+				<value name="DeleteWordToLeft" type="dword" data="00001157"/>
 				<value name="FindTextKey" type="dword" data="00005d46"/>
 				<value name="ScreenshotKey" type="dword" data="00000000"/>
 				<value name="ScreenshotFullKey" type="dword" data="00000000"/>
