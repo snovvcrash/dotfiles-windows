@@ -11,5 +11,3 @@ sublime/User/*.crt
 #cmder
 cmder/config/profile.d/
 cmder/config/.history
-cmder/config/ConEmu.xml
-cmder/config/Readme.md
