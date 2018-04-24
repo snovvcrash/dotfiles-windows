@@ -21,7 +21,7 @@ l=ls -lah --color $*
 
 ;= rem Python virtualenvwrapper-win
 ;= rem python=winpty python.exe
-pyclean=fnd.exe . -name "__pycache__" -o -name "*.pyc" -o -name "*.pyo" | xargs rm -rf
+pyclean=fnd.exe ./ \( -name "__pycache__" -o -name "*.pyc" -o -name "*.pyo" \) -prune -exec rm -rf {} +
 mkvirtualenv=mkvirtualenv.bat $*
 rmvirtualenv=rmvirtualenv.bat $*
 workon=workon.bat $*
