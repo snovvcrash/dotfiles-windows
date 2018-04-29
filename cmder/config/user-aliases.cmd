@@ -19,9 +19,10 @@ cmderr=cd /d "%CMDER_ROOT%"
 ;= rem Directories
 l=ls -lah --color $*
 
-;= rem Python virtualenvwrapper-win
+;= rem Python
 ;= rem python=winpty python.exe
 pyclean=fnd.exe ./ \( -name "__pycache__" -o -name "*.pyc" -o -name "*.pyo" \) -prune -exec rm -rf {} +
+virtualenv=virtualenv.exe $*
 mkvirtualenv=mkvirtualenv.bat $*
 rmvirtualenv=rmvirtualenv.bat $*
 workon=workon.bat $*
