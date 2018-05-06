@@ -30,3 +30,13 @@ deactivate=deactivate.bat
 
 ;= rem Sublime Text
 subl="E:\Program Files (unofficial)\Sublime Text 3\sublime_text.exe" $*
+
+;= rem Git
+gs=git status $*
+ga=git add $*
+gb=git branch $*
+gc=git commit $*
+gd=git diff $*
+go=git checkout $*
+gk=gitk --all $*
+gx=gitx --all $*
