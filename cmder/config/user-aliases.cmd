@@ -27,3 +27,6 @@ mkvirtualenv=mkvirtualenv.bat $*
 rmvirtualenv=rmvirtualenv.bat $*
 workon=workon.bat $*
 deactivate=deactivate.bat
+
+;= rem Sublime Text
+subl="E:\Program Files (unofficial)\Sublime Text 3\sublime_text.exe" $*
