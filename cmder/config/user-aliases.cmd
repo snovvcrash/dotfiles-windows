@@ -29,7 +29,8 @@ workon=workon.bat $*
 deactivate=deactivate.bat
 
 ;= rem Sublime Text
-subl="E:\Program Files (unofficial)\Sublime Text 3\sublime_text.exe" $*
+;= rem subl="C:\Program Files\Sublime Text 3\subl.exe" $*
+subl="E:\Program Files (unofficial)\Sublime Text 3\subl.exe" $*
 
 ;= rem Git
 gs=git status $*
