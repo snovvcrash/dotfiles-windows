@@ -1,7 +1,7 @@
 [user]
 	#name = Sam Free5ide
 	name = Sam Frees1de
-	email = snovvcrash@protonmail.com
+	email = snovvcrash@protonmail.ch
 [core]
 	editor = 'E:\\Program Files (unofficial)\\Sublime Text 3\\sublime_text.exe' -n -w
 	autocrlf = true
