@@ -3,7 +3,7 @@
 	name = Sam Frees1de
 	email = snovvcrash@protonmail.ch
 [core]
-	editor = 'E:\\Program Files (unofficial)\\Sublime Text 3\\sublime_text.exe' -n -w
+	editor = \"E:\\Program Files (unofficial)\\Sublime Text 3\\sublime_text.exe\" -w
 	autocrlf = true
 	#safecrlf = true
 [alias]
