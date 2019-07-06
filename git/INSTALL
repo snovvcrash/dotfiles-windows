@@ -1,3 +1,2 @@
-﻿# PowerShell
-rm "$env:userprofile\.gitconfig"
-cmd /c mklink "$env:userprofile\.gitconfig" "$env:userprofile\.dotfiles\git\.gitconfig"
+﻿PS > rm "$env:userprofile\.gitconfig"
+PS > cmd /c mklink "$env:userprofile\.gitconfig" "$env:userprofile\.dotfiles\git\.gitconfig"
