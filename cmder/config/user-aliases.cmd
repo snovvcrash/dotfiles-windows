@@ -16,15 +16,19 @@ cmderr=cd /d "%CMDER_ROOT%"
 
 ;= rem Custom settings
 
+;= rem Find
+fnd="C:\Program Files\Git\usr\bin\find.exe"
+
 ;= rem Directories
 l=ls -lah --color $*
 
 ;= rem Python
 ;= rem python=winpty python.exe
-pyclean=fnd.exe ./ \( -name "__pycache__" -o -name "*.pyc" -o -name "*.pyo" \) -prune -exec rm -rf {} +
+pyclean="C:\Program Files\Git\usr\bin\find.exe" ./ \( -name "__pycache__" -o -name "*.pyc" -o -name "*.pyo" \) -prune -exec rm -rf {} +
 virtualenv=virtualenv.exe $*
 mkvirtualenv=mkvirtualenv.bat $*
 rmvirtualenv=rmvirtualenv.bat $*
+lsvirtualenv=lsvirtualenv.bat
 workon=workon.bat $*
 deactivate=deactivate.bat
 
