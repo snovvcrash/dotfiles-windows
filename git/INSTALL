@@ -1,2 +1,6 @@
 ﻿PS> rm "$env:userprofile\.gitconfig"
 PS> cmd /c mklink "$env:userprofile\.gitconfig" "$env:userprofile\.dotfiles\git\.gitconfig"
+
+# WSL
+rm ${HOME}/.gitconfig
+ln -sv ${HOME}/.dotfiles/git/.gitconfig ${HOME}/.gitconfig
