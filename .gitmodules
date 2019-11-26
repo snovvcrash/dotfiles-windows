@@ -1,0 +1,3 @@
+[submodule "wsl"]
+	path = wsl
+	url = https://github.com/snovvcrash/dotfiles-linux

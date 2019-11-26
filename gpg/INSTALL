@@ -1,2 +1,2 @@
-﻿PS > rm "$env:appdata\gnupg\gpg.conf"
-PS > cmd /c mklink "$env:appdata\gnupg\gpg.conf" "$env:userprofile\.dotfiles\gpg\gpg.conf"
+﻿PS> rm "$env:appdata\gnupg\gpg.conf"
+PS> cmd /c mklink "$env:appdata\gnupg\gpg.conf" "$env:userprofile\.dotfiles\gpg\gpg.conf"
