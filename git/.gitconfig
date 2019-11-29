@@ -1,8 +1,8 @@
 [user]
-	# name = Sam Free5ide # Linux
-	name = Sam Fr3eside # Windows
-	# name = Sam Fre3side # WSL
-	# name = Sam Frees1de # Other
+	# name = Sam Free5ide  # Linux
+	name = Sam Fr3eside  # Windows
+	# name = Sam Fre3side  # WSL
+	# name = Sam Frees1de  # Other
 	email = snovvcrash@protonmail.ch
 [core]
 	editor = \"E:\\Program Files (unofficial)\\Sublime Text 3\\sublime_text.exe\" -w

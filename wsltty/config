@@ -1,0 +1,14 @@
+# To use common configuration in %APPDATA%\mintty, simply remove this file
+FontHeight=12
+ThemeFile=dracula
+CursorType=block
+CursorBlinks=no
+Font=Consolas
+CtrlShiftShortcuts=yes
+PgUpDnScroll=yes
+Term=xterm-256color
+BellType=0
+ClicksPlaceCursor=yes
+MiddleClickAction=enter
+RightClickAction=paste
+CopyOnSelect=yes

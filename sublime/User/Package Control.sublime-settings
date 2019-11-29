@@ -2,7 +2,6 @@
 	"bootstrapped": true,
 	"in_process_packages":
 	[
-		"Boxy Theme"
 	],
 	"installed_packages":
 	[
@@ -10,7 +9,6 @@
 		"Agila Theme",
 		"Anaconda",
 		"Base Encoder",
-		"Boxy Theme",
 		"DiffTabs",
 		"Dracula Color Scheme",
 		"HexViewer",

@@ -1,7 +1,7 @@
 {
 	"enable_signatures_tooltip": false,
 
-	"python_interpreter": "python3",
+	"python_interpreter": "python",
 
 	"anaconda_linting": false,
 	"anaconda_linting_behaviour": "load-save",

@@ -1,0 +1,15 @@
+[General]
+	[Size & Pos]
+	* Long console output: 1000 => 10000
+	[Task bar]
+	* Active console only (ConEmu window): Off => On
+
+[Features]
+	[Transparency]
+	* Active windows transparency: to max
+	* Use separate transparency value for inactive window: On => Off
+
+[Keys & Macro]
+* CTRL-Backspace => CTRL-W (Close active console: Close(0) => Delete word leftward to the cursor (ignored in Far))
+	[Mark/Copy]
+	* Reset selection on Left Button release

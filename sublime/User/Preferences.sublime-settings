@@ -4,7 +4,6 @@
 	"hot_exit": false,
 	"ignored_packages":
 	[
-		"Boxy Theme",
 		"Vintage"
 	],
 	"scroll_past_end": false,

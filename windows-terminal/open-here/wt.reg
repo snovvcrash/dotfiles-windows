@@ -1,0 +1,15 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_CLASSES_ROOT\Directory\background\shell\WT]
+@="Open Windows Terminal here"
+"Icon"="C:\\Users\\manwi\\AppData\\Local\\Packages\\Microsoft.WindowsTerminal_8wekyb3d8bbwe\\LocalState\\wt_32.ico"
+
+[HKEY_CLASSES_ROOT\Directory\background\shell\WT\command]
+@="C:\\Users\\manwi\\AppData\\Local\\Microsoft\\WindowsApps\\wt.exe"
+
+[HKEY_CLASSES_ROOT\Directory\shell\WT]
+@="Open Windows Terminal here"
+"Icon"="C:\\Users\\manwi\\AppData\\Local\\Packages\\Microsoft.WindowsTerminal_8wekyb3d8bbwe\\LocalState\\wt_32.ico"
+
+[HKEY_CLASSES_ROOT\Directory\shell\WT\command]
+@="C:\\Users\\manwi\\AppData\\Local\\Microsoft\\WindowsApps\\wt.exe"

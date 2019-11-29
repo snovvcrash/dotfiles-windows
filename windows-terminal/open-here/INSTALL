@@ -1,0 +1,18 @@
+https://github.com/microsoft/terminal/issues/1060#issuecomment-497539461
+https://github.com/microsoft/terminal/issues/1060#issuecomment-536322970
+https://github.com/microsoft/terminal/issues/1060#issuecomment-549533078
+
+https://stackoverflow.com/questions/4051883/batch-script-how-to-check-for-admin-rights
+https://superuser.com/questions/598985/using-environment-variable-in-registry-for-command/599025
+https://superuser.com/questions/251794/how-can-i-specify-reg-expand-sz-entries-in-a-reg-file
+
+Cmd> copy "%USERPROFILE%\.dotfiles\windows-terminal\open-here\wt_32.ico" "%LOCALAPPDATA%\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState"
+
+Cmd> "%USERPROFILE%\.dotfiles\windows-terminal\open-here\wt.reg"
+Or
+Cmd> reg.exe add "HKEY_CLASSES_ROOT\Directory\background\shell\WT" /f /ve /d "Open Windows Terminal here"
+Cmd> reg.exe add "HKEY_CLASSES_ROOT\Directory\background\shell\WT" /f /v "Icon" /t REG_EXPAND_SZ /d "\"%%LOCALAPPDATA%%\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\wt_32.ico\""
+Cmd> reg.exe add "HKEY_CLASSES_ROOT\Directory\background\shell\WT\command" /f /ve /t REG_EXPAND_SZ /d "\"%%LOCALAPPDATA%%\Microsoft\WindowsApps\wt.exe\""
+Cmd> reg.exe add "HKEY_CLASSES_ROOT\Directory\shell\WT" /f /ve /d "Open Windows Terminal here"
+Cmd> reg.exe add "HKEY_CLASSES_ROOT\Directory\shell\WT" /f /v "Icon" /t REG_EXPAND_SZ /d "\"%%LOCALAPPDATA%%\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\wt_32.ico\""
+Cmd> reg.exe add "HKEY_CLASSES_ROOT\Directory\shell\WT\command" /f /ve /t REG_EXPAND_SZ /d "\"%%LOCALAPPDATA%%\Microsoft\WindowsApps\wt.exe\""

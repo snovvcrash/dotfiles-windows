@@ -1,2 +1,4 @@
-﻿PS> rmdir -recurse "$env:appdata\Sublime Text 3\Packages\User"
+﻿PS> Start-Process PowerShell -Verb RunAs
+
+PS> rmdir -recurse "$env:appdata\Sublime Text 3\Packages\User"
 PS> cmd /c mklink /D "$env:appdata\Sublime Text 3\Packages\User" "$env:userprofile\.dotfiles\Sublime\User"

@@ -1,0 +1,4 @@
+﻿PS> Start-Process PowerShell -Verb RunAs
+
+PS> rm "$env:appdata\wsltty\config"
+PS> cmd /c mklink "$env:appdata\wsltty\config" "$env:userprofile\.dotfiles\wsltty\config"

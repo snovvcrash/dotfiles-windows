@@ -17,14 +17,14 @@ cmderr=cd /d "%CMDER_ROOT%"
 ;= rem Custom settings
 
 ;= rem Find
-fnd="C:\Program Files\Git\usr\bin\find.exe"
+fnd="C:\cmder\vendor\git-for-windows\usr\bin\find.exe"
 
 ;= rem Directories
 l=ls -lah --color $*
 
 ;= rem Python
 ;= rem python=winpty python.exe
-pyclean="C:\Program Files\Git\usr\bin\find.exe" ./ \( -name "__pycache__" -o -name "*.pyc" -o -name "*.pyo" \) -prune -exec rm -rf {} +
+pyclean="C:\cmder\vendor\git-for-windows\usr\bin\find.exe" ./ \( -name "__pycache__" -o -name "*.pyc" -o -name "*.pyo" \) -prune -exec rm -rf {} +
 virtualenv=virtualenv.exe $*
 mkvirtualenv=mkvirtualenv.bat $*
 rmvirtualenv=rmvirtualenv.bat $*
@@ -33,8 +33,7 @@ workon=workon.bat $*
 deactivate=deactivate.bat
 
 ;= rem Sublime Text
-;= rem subl="C:\Program Files\Sublime Text 3\subl.exe" $*
-subl="E:\Program Files (unofficial)\Sublime Text 3\subl.exe" $*
+subl="E:\Programs\Sublime Text 3\subl.exe" $*
 
 ;= rem Git
 gs=git status $*

@@ -1,0 +1,12 @@
+PS> Start-Process PowerShell -Verb RunAs
+
+PS> rm "C:\cmder\config\user-ConEmu.xml"
+PS> cmd /c mklink "C:\cmder\config\user-ConEmu.xml" "$env:userprofile\.dotfiles\cmder\config\user-ConEmu.xml"
+PS> rm "C:\cmder\config\user_profile.cmd"
+PS> cmd /c mklink "C:\cmder\config\user_profile.cmd" "$env:userprofile\.dotfiles\cmder\config\user_profile.cmd"
+PS> rm "C:\cmder\config\user_aliases.cmd"
+PS> cmd /c mklink "C:\cmder\config\user_aliases.cmd" "$env:userprofile\.dotfiles\cmder\config\user_aliases.cmd"
+PS> rm "C:\cmder\config\settings"
+PS> cmd /c mklink "C:\cmder\config\settings" "$env:userprofile\.dotfiles\cmder\config\settings"
+PS> rm "C:\cmder\config\user-profile.sh"
+PS> cmd /c mklink "C:\cmder\config\user-profile.sh" "$env:userprofile\.dotfiles\cmder\config\user-profile.sh"
