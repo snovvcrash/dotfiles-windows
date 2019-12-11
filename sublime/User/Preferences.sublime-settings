@@ -4,7 +4,8 @@
 	"hot_exit": false,
 	"ignored_packages":
 	[
-		"Vintage"
+		"Vintage",
+		"zzz A File Icon zzz"
 	],
 	"scroll_past_end": true,
 	"scroll_speed": 0,
