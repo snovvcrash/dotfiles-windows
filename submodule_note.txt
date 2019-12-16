@@ -1,8 +1,0 @@
-Add wsl branch as a submodule:
-
-1. git submodule add https://github.com/snovvcrash/dotfiles-linux wsl
-
-2. git config -f .gitmodules submodule.wsl.branch wsl
-   or
-   git submodule add https://github.com/snovvcrash/dotfiles-linux wsl
-   (adds "branch = wsl" to .gitmodules)

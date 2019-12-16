@@ -1,6 +1,15 @@
 dotfiles-windows
 ==========
 
+## Create
+
+Track WSL branch as a submodule:
+
+```
+$ git submodule add https://github.com/snovvcrash/dotfiles-linux wsl
+Adds "branch = wsl" to .gitmodules (same as "git config -f .gitmodules submodule.wsl.branch wsl")
+```
+
 ## Clone
 
 ```

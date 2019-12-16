@@ -12,3 +12,5 @@ ClicksPlaceCursor=yes
 MiddleClickAction=enter
 RightClickAction=paste
 CopyOnSelect=yes
+Columns=170
+Rows=50
