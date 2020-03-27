@@ -10,6 +10,6 @@
 	* Use separate transparency value for inactive window: On => Off
 
 [Keys & Macro]
-* CTRL-Backspace => CTRL-W (Close active console: Close(0) => Delete word leftward to the cursor (ignored in Far))
+* Ctrl+Backspace => Ctrl+W (Close active console: Close(0) => Delete word leftward to the cursor (ignored in Far))
 	[Mark/Copy]
 	* Reset selection on Left Button release
