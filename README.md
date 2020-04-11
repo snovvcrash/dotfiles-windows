@@ -6,33 +6,34 @@ dotfiles-windows
 Track WSL branch as a submodule:
 
 ```
-~$ git submodule add https://github.com/snovvcrash/dotfiles-linux wsl
+/mnt/c/Users/snovvcrash/.dotfiles$ git submodule add https://github.com/snovvcrash/dotfiles-linux wsl
 Adds "branch = wsl" to .gitmodules (same as "git config -f .gitmodules submodule.wsl.branch wsl")
 ```
 
 ## Clone
 
 ```
-~$ git clone https://github.com/snovvcrash/dotfiles-windows ~/.dotfiles
-~$ ln -sv $(wslpath `cmd.exe /C "echo %USERPROFILE%" | tr -d "\r"`)/.dotfiles/wsl ${HOME}/.dotfiles
+~$ WIN_DOTFILES_DIR="$(wslpath `cmd.exe /C "echo %USERPROFILE%" | tr -d "\r"`)/.dotfiles"
+~$ git clone https://github.com/snovvcrash/dotfiles-windows "${WIN_DOTFILES_DIR}"
+~$ ln -sv "${WIN_DOTFILES_DIR}/wsl" ~/.dotfiles
 ```
 
 ## Init
 
 ```
-~/.dotfiles$ git submodule update --init --remote
-~/.dotfiles$ git submodule foreach "git checkout $(git config -f $toplevel/.gitmodules submodule.$name.branch || echo master)"
+/mnt/c/Users/snovvcrash/.dotfiles$ git submodule update --init --remote
+/mnt/c/Users/snovvcrash/.dotfiles$ git submodule foreach "git checkout $(git config -f $toplevel/.gitmodules submodule.$name.branch || echo master)"
 ```
 
 ## Update
 
 ```
-~/.dotfiles$ cd wsl
-~/.dotfiles/wsl$ git commit -am "Changes in wsl repo"
-~/.dotfiles/wsl$ git push origin wsl
-~/.dotfiles/wsl$ cd ..
-~/.dotfiles$ git commit -am "Changes in dotfiles-windows repo"
-~/.dotfiles$ git push origin master
+/mnt/c/Users/snovvcrash/.dotfiles$ cd wsl
+/mnt/c/Users/snovvcrash/.dotfiles/wsl$ git commit -am "Changes in wsl repo"
+/mnt/c/Users/snovvcrash/.dotfiles/wsl$ git push origin wsl
+/mnt/c/Users/snovvcrash/.dotfiles/wsl$ cd ..
+/mnt/c/Users/snovvcrash/.dotfiles$ git commit -am "Changes in dotfiles-windows repo"
+/mnt/c/Users/snovvcrash/.dotfiles$ git push origin master
 ```
 
 ## Useful links
