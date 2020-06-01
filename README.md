@@ -48,5 +48,5 @@ Adds "branch = wsl" to .gitmodules (same as "git config -f .gitmodules submodule
 * [VxSrv](https://github.com/ArcticaProject/vcxsrv/releases) (WSL)
 * [Sublime Text 3](https://www.sublimetext.com/3)
 * [QTTabBar](http://qttabbar.wikidot.com/)
-* [Enigma (Rainmeter)](https://github.com/Kaelri/Enigma)
+* [Enigma (Rainmeter)](https://github.com/Kaelri/Enigma) + Fix LAN display [issue](https://github.com/Kaelri/Enigma/issues/73)
 * [Winstep Nexus](https://www.winstep.net/nexus.asp)
