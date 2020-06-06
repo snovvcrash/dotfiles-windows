@@ -47,10 +47,11 @@ Adds "branch = wsl" to .gitmodules (same as "git config -f .gitmodules submodule
 # Install tmux
 ~$ curl https://raw.githubusercontent.com/snovvcrash/dotfiles-linux/master/00-autoconfig/tmux.sh |bash
 
-# Create symlinks
+# Misc
 ~$ bash ~/.dotfiles/git/INSTALL.sh \
   && bash ~/.dotfiles/ssh/INSTALL.sh \
-  && bash ~/.dotfiles/fzf/INSTALL.sh
+  && bash ~/.dotfiles/fzf/INSTALL.sh \
+  && sudo -E bash ~/.dotfiles/wslconf/INSTALL.sh
 ```
 
 ## Update
@@ -73,11 +74,13 @@ Adds "branch = wsl" to .gitmodules (same as "git config -f .gitmodules submodule
 
 ### Other
 
-* [VxSrv](https://github.com/ArcticaProject/vcxsrv/releases) (WSL)
 * [Sublime Text 3](https://www.sublimetext.com/3)
 * [QTTabBar](http://qttabbar.wikidot.com/)
 * [Enigma (Rainmeter)](https://github.com/Kaelri/Enigma) + Fix LAN display [issue](https://github.com/Kaelri/Enigma/issues/73)
 * [Winstep Nexus](https://www.winstep.net/nexus.asp)
+* [Winaero Tweaker](https://winaero.com/download.php?view.1796) (Menu Show Delay)
+* [VxSrv](https://github.com/ArcticaProject/vcxsrv/releases) (WSL)
 * [microsoft/PowerToys](https://github.com/microsoft/PowerToys/releases/)
 * [Ditto Clipboard Manager](https://ditto-cp.sourceforge.io/)
 * [Sizer](http://www.brianapps.net/sizer4/)
+* [Eun/MoveToDesktop](https://github.com/Eun/MoveToDesktop)
