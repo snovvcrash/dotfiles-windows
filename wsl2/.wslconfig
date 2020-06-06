@@ -1,0 +1,3 @@
+[wsl2]
+memory=6GB
+swapFile=E:\\wsl2-swap.vhdx

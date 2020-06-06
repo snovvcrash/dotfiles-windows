@@ -5,20 +5,31 @@
 {
     "$schema": "https://aka.ms/terminal-profiles-schema",
 
-    "defaultProfile": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
+    "defaultProfile": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
 
     "profiles":
     [
         {
             // Make changes here to the powershell.exe profile
+            "acrylicOpacity": 0.9,
+            "closeOnExit": true,
+            "colorScheme": "Campbell Powershell",
+            "commandline": "powershell.exe",
+            "cursorColor": "#FFFFFF",
+            "cursorShape": "bar",
+            "fontFace": "Meslo LG S for Powerline",
+            "fontSize": 11,
             "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
             "name": "Windows PowerShell",
-            "commandline": "powershell.exe",
-            "startingDirectory": ".",
-            "hidden": false
+            "hidden": false,
+            "padding": "0, 0, 0, 0",
+            "snapOnInput": true,
+            "startingDirectory": "%USERPROFILE%",
+            "useAcrylic": true
         },
         {
             // Make changes here to the cmd.exe profile
+            "fontSize": 10,
             "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
             "name": "cmd",
             "commandline": "cmd.exe",
@@ -36,6 +47,12 @@
             "hidden": false,
             "name": "Ubuntu",
             "startingDirectory": ".",
+            "source": "Windows.Terminal.Wsl"
+        },
+        {
+            "guid": "{07b52e3e-de2c-5db4-bd2d-ba144ed6c273}",
+            "hidden": false,
+            "name": "Ubuntu-20.04",
             "source": "Windows.Terminal.Wsl"
         }
     ],

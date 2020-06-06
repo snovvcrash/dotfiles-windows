@@ -5,29 +5,75 @@ dotfiles-windows
 
 Track WSL branch as a submodule:
 
-```
+```sh
 /mnt/c/Users/snovvcrash/.dotfiles$ git submodule add https://github.com/snovvcrash/dotfiles-linux wsl
 Adds "branch = wsl" to .gitmodules (same as "git config -f .gitmodules submodule.wsl.branch wsl")
 ```
 
-## Clone
+## Deploy
 
-```
+```sh
+# Update & Upgrade
+~$ sudo apt update && sudo apt upgrade -y
+
+# Install some stuff
+~$ sudo apt install -y \
+  curl \
+  net-tools \
+  mlocate \
+  cmake \
+  g++ \
+  htop
+
+# Clone dotfiles
 ~$ WIN_DOTFILES_DIR="$(wslpath `cmd.exe /C "echo %USERPROFILE%" | tr -d "\r"`)/.dotfiles"
 ~$ git clone https://github.com/snovvcrash/dotfiles-windows "${WIN_DOTFILES_DIR}"
 ~$ ln -sv "${WIN_DOTFILES_DIR}/wsl" ~/.dotfiles
-```
 
-## Init
-
-```
+# Init dotfiles
 /mnt/c/Users/snovvcrash/.dotfiles$ git submodule update --init --remote
 /mnt/c/Users/snovvcrash/.dotfiles$ git submodule foreach "git checkout $(git config -f $toplevel/.gitmodules submodule.$name.branch || echo master)"
+
+# Configure bash
+~$ cat << 'EOT' >> ~/.bashrc
+
+# Determine git branch
+parse_git_branch() {
+    git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
+}
+
+PS1='\[[01;32m\]\u@\h\[[00m\]:\[[01;34m\]\w\[[00m\] \[[01;33m\]$(parse_git_branch)\[[00m\]\$ '
+
+# Resolve DOTFILES_DIR
+if [ -d "$HOME/.dotfiles" ]; then
+    DOTFILES_DIR="$HOME/.dotfiles"
+else
+    echo "Unable to find dotfiles, exiting..."
+    return
+fi
+
+# Source dotfiles
+for DOTFILE in "$DOTFILES_DIR"/system/.*; do
+    [ -f "$DOTFILE" ] && . "$DOTFILE"
+done
+EOT
+
+# Install Python
+~$ sudo apt install python2.7 -y && sudo ln -sv /usr/bin/python2.7 /usr/bin/python
+~$ curl https://raw.githubusercontent.com/snovvcrash/dotfiles-linux/master/00-autoconfig/python.sh |bash
+
+# Install tmux
+~$ curl https://raw.githubusercontent.com/snovvcrash/dotfiles-linux/master/00-autoconfig/tmux.sh |bash
+
+# Create symlinks
+~$ bash ~/.dotfiles/git/INSTALL.sh \
+  && bash ~/.dotfiles/ssh/INSTALL.sh \
+  && bash ~/.dotfiles/fzf/INSTALL.sh
 ```
 
 ## Update
 
-```
+```sh
 /mnt/c/Users/snovvcrash/.dotfiles$ cd wsl
 /mnt/c/Users/snovvcrash/.dotfiles/wsl$ git commit -am "Changes in wsl repo"
 /mnt/c/Users/snovvcrash/.dotfiles/wsl$ git push origin wsl
@@ -50,3 +96,6 @@ Adds "branch = wsl" to .gitmodules (same as "git config -f .gitmodules submodule
 * [QTTabBar](http://qttabbar.wikidot.com/)
 * [Enigma (Rainmeter)](https://github.com/Kaelri/Enigma) + Fix LAN display [issue](https://github.com/Kaelri/Enigma/issues/73)
 * [Winstep Nexus](https://www.winstep.net/nexus.asp)
+* [microsoft/PowerToys](https://github.com/microsoft/PowerToys)
+* [Ditto Clipboard Manager](https://ditto-cp.sourceforge.io/)
+* [Sizer](http://www.brianapps.net/sizer4/)

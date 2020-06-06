@@ -1,0 +1,4 @@
+﻿PS> Start-Process PowerShell -Verb RunAs
+
+PS> rm "$env:userprofile\.wslconfig"
+PS> cmd /c mklink "$env:userprofile\.wslconfig" "$env:userprofile\.dotfiles\wsl2\.wslconfig"
