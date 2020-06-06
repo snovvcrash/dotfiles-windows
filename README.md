@@ -78,6 +78,6 @@ Adds "branch = wsl" to .gitmodules (same as "git config -f .gitmodules submodule
 * [QTTabBar](http://qttabbar.wikidot.com/)
 * [Enigma (Rainmeter)](https://github.com/Kaelri/Enigma) + Fix LAN display [issue](https://github.com/Kaelri/Enigma/issues/73)
 * [Winstep Nexus](https://www.winstep.net/nexus.asp)
-* [microsoft/PowerToys](https://github.com/microsoft/PowerToys)
+* [microsoft/PowerToys](https://github.com/microsoft/PowerToys/releases/)
 * [Ditto Clipboard Manager](https://ditto-cp.sourceforge.io/)
 * [Sizer](http://www.brianapps.net/sizer4/)
