@@ -15,6 +15,15 @@ Adds "branch = wsl" to .gitmodules (same as "git config -f .gitmodules submodule
 ## Deploy
 
 ```sh
+# Remount with custom options
+~$ sudo bash -c 'cat << EOF > /etc/wsl.conf
+[automount]
+root = /mnt/
+options = "metadata,umask=22,fmask=11"
+EOF'
+
+PS > Restart-Service -Name LxssManager
+
 # Update & Upgrade
 ~$ sudo apt update && sudo apt upgrade -y
 
@@ -69,6 +78,7 @@ Adds "branch = wsl" to .gitmodules (same as "git config -f .gitmodules submodule
 
 ### Terminals
 
+* [microsoft/terminal](https://github.com/microsoft/terminal)
 * [cmder](https://cmder.net/)
 * [wsltty](https://github.com/mintty/wsltty/releases)
 

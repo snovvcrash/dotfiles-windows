@@ -1,0 +1,4 @@
+﻿PS> Start-Process PowerShell -Verb RunAs
+
+PS> rm "$env:appdata\Microsoft\Windows\Start Menu\Programs\Startup\startup.ahk"
+PS> cmd /c mklink "$env:appdata\Microsoft\Windows\Start Menu\Programs\Startup\startup.ahk" "$env:userprofile\.dotfiles\ahk\startup.ahk"
