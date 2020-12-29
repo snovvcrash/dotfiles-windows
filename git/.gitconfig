@@ -4,12 +4,22 @@
 	# name = Sam Fre3side  # WSL
 	# name = Sam Frees1de  # Other
 	email = snovvcrash@protonmail.ch
+	signingkey = snovvcrash@protonmail.ch
+
 [credential]
 	helper = manager
+
 [core]
 	editor = \"E:\\Programs\\Sublime Text 3\\sublime_text.exe\" -w
 	autocrlf = true
 	# safecrlf = true
+
+[commit]
+	gpgsign = true
+
+[tag]
+	gpgsign = true
+
 [alias]
 	co = checkout
 	ci = commit
