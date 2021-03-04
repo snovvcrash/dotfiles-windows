@@ -1,4 +1,7 @@
 ﻿PS> Start-Process PowerShell -Verb RunAs
 
-PS> rm "$env:appdata\Microsoft\Windows\Start Menu\Programs\Startup\startup.ahk"
-PS> cmd /c mklink "$env:appdata\Microsoft\Windows\Start Menu\Programs\Startup\startup.ahk" "$env:userprofile\.dotfiles\ahk\startup.ahk"
+PS> rm "$env:appdata\Microsoft\Windows\Start Menu\Programs\Startup\paste.ahk"
+PS> cmd /c mklink "$env:appdata\Microsoft\Windows\Start Menu\Programs\Startup\paste.ahk" "$env:userprofile\.dotfiles\ahk\paste.ahk"
+
+PS> rm "$env:appdata\Microsoft\Windows\Start Menu\Programs\Startup\git_auto_commit.ahk"
+PS> cmd /c mklink "$env:appdata\Microsoft\Windows\Start Menu\Programs\Startup\git_auto_commit.ahk" "$env:userprofile\.dotfiles\ahk\git_auto_commit.ahk"
