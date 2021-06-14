@@ -1,4 +1,4 @@
-﻿PS> Start-Process PowerShell -Verb RunAs
+﻿PS > Start-Process cmd -Verb RunAs
 
-PS> rm "$env:localappdata\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\profiles.json"
-PS> cmd /c mklink "$env:localappdata\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\profiles.json" "$env:userprofile\.dotfiles\windows-terminal\profiles.json"
+Cmd > del "%LOCALAPPDATA%\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json"
+Cmd > mklink "%LOCALAPPDATA%\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json" "%USERPROFILE%\.dotfiles\windows-terminal\settings.json"

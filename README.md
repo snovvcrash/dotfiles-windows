@@ -8,13 +8,15 @@ Everything is being done under WSL console.
 Track WSL branch as a submodule:
 
 ```sh
+# Adds "branch = wsl" to .gitmodules (same as "git config -f .gitmodules submodule.wsl.branch wsl")
 /mnt/c/Users/snovvcrash/.dotfiles$ git submodule add https://github.com/snovvcrash/dotfiles-linux wsl
-Adds "branch = wsl" to .gitmodules (same as "git config -f .gitmodules submodule.wsl.branch wsl")
 ```
 
 ## Deploy
 
 ```sh
+PS > wsl
+
 # Remount with custom options
 ~$ sudo bash -c 'cat << EOF > /etc/wsl.conf
 [automount]
@@ -22,17 +24,19 @@ root = /mnt/
 options = "metadata,umask=22,fmask=11"
 EOF'
 
-PS > Restart-Service -Name LxssManager
+~$ exit
+PS > wsl --shutdown
+PS > wsl
 
 # Update & Upgrade
 ~$ sudo apt update && sudo apt upgrade -y
 
 # Install some stuff
 ~$ sudo apt install -y \
-  curl \
-  net-tools \
-  mlocate \
-  cmake \
+  curl                 \
+  net-tools            \
+  mlocate              \
+  cmake                \
   g++
 
 # Clone dotfiles
@@ -47,20 +51,13 @@ PS > Restart-Service -Name LxssManager
 # Configure bash (lightweight)
 ~$ cat ~/.dotfiles/bash/.bashrc >> ~/.bashrc
 # Or install zsh
-~$ curl https://raw.githubusercontent.com/snovvcrash/dotfiles-linux/master/00-autoconfig/zsh.sh |bash
-
-# Install Python
-~$ sudo apt install python2.7 -y && sudo ln -sv /usr/bin/python2.7 /usr/bin/python
-~$ curl https://raw.githubusercontent.com/snovvcrash/dotfiles-linux/master/00-autoconfig/python.sh |bash
+~$ curl -ksL https://github.com/snovvcrash/dotfiles-linux/raw/master/00-autoconfig/zsh.sh | bash
 
 # Install tmux
-~$ curl https://raw.githubusercontent.com/snovvcrash/dotfiles-linux/master/00-autoconfig/tmux.sh |bash
+~$ curl -ksL https://github.com/snovvcrash/dotfiles-linux/raw/master/00-autoconfig/tmux.sh | bash
 
-# Misc
-~$ bash ~/.dotfiles/git/INSTALL.sh \
-  && bash ~/.dotfiles/ssh/INSTALL.sh \
-  && bash ~/.dotfiles/fzf/INSTALL.sh \
-  && sudo -E bash ~/.dotfiles/wslconf/INSTALL.sh
+# Install fzf
+~$ curl -ksL https://github.com/snovvcrash/dotfiles-linux/raw/master/00-autoconfig/fzf.sh | bash
 ```
 
 ## Update
@@ -82,15 +79,34 @@ PS > Restart-Service -Name LxssManager
 * [cmder](https://cmder.net/)
 * [wsltty](https://github.com/mintty/wsltty/releases)
 
-### Other
+### Widgets
 
-* [Sublime Text 3](https://www.sublimetext.com/3)
-* [QTTabBar](http://qttabbar.wikidot.com/)
 * [Enigma (Rainmeter)](https://github.com/Kaelri/Enigma) + Fix LAN display [issue](https://github.com/Kaelri/Enigma/issues/73)
 * [Winstep Nexus](https://www.winstep.net/nexus.asp)
-* [Winaero Tweaker](https://winaero.com/download.php?view.1796) (Menu Show Delay)
-* [VxSrv](https://github.com/ArcticaProject/vcxsrv/releases) (WSL)
-* [microsoft/PowerToys](https://github.com/microsoft/PowerToys/releases/)
-* [Ditto Clipboard Manager](https://ditto-cp.sourceforge.io/)
-* [Sizer](http://www.brianapps.net/sizer4/)
+
+### Personalization
+
+* [QTTabBar](http://qttabbar.wikidot.com/)
 * [Eun/MoveToDesktop](https://github.com/Eun/MoveToDesktop)
+* [Sizer](http://www.brianapps.net/sizer4/)
+* [Winaero Tweaker](https://winaero.com/download.php?view.1796) (Menu Show Delay)
+
+### Text Editors
+
+* [Sublime Text 3](https://www.sublimetext.com/3)
+* [Typora](https://typora.io/)
+* [Obsidian](https://obsidian.md/)
+
+### Remote Clients
+
+* [Xshell](https://www.netsarang.com/ru/xshell/)
+* [Xftp](https://www.netsarang.com/ru/xftp/)
+* [X2Go Client](https://wiki.x2go.org/doku.php/doc:installation:x2goclient)
+
+### Other
+
+* [K-Lite Codec Pack](https://codecguide.com/download_kl.htm) (Standard)
+* [VxSrv](https://github.com/ArcticaProject/vcxsrv/releases) (WSL)
+* [Greenshot](https://getgreenshot.org/downloads/)
+* [Ditto Clipboard Manager](https://ditto-cp.sourceforge.io/)
+* [microsoft/PowerToys](https://github.com/microsoft/PowerToys/releases/)

@@ -20,7 +20,7 @@ cmderr=cd /d "%CMDER_ROOT%"
 fnd="C:\cmder\vendor\git-for-windows\usr\bin\find.exe"
 
 ;= rem Directories
-l=ls -lah --color $*
+ll=ls -lah --color $*
 
 ;= rem Python
 ;= rem python=winpty python.exe
@@ -31,9 +31,6 @@ rmvirtualenv=rmvirtualenv.bat $*
 lsvirtualenv=lsvirtualenv.bat
 workon=workon.bat $*
 deactivate=deactivate.bat
-
-;= rem Sublime Text
-subl="E:\Programs\Sublime Text 3\subl.exe" $*
 
 ;= rem Git
 gs=git status $*
