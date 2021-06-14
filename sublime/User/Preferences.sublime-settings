@@ -1,6 +1,6 @@
 {
 	"color_scheme": "Packages/Color Scheme - Default/Monokai.sublime-color-scheme",
-	"font_size": 12,
+	"font_size": 11,
 	"hot_exit": false,
 	"ignored_packages":
 	[
@@ -8,5 +8,5 @@
 	],
 	"scroll_past_end": true,
 	"scroll_speed": 0,
-	"theme": "Adaptive.sublime-theme"
+	"theme": "Adaptive.sublime-theme",
 }
