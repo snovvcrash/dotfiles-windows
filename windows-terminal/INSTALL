@@ -1,4 +1,4 @@
-﻿PS > Start-Process cmd -Verb RunAs
+﻿PS > Start-Process cmd.exe -Verb RunAs
 
 Cmd > del "%LOCALAPPDATA%\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json"
 Cmd > mklink "%LOCALAPPDATA%\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json" "%USERPROFILE%\.dotfiles\windows-terminal\settings.json"

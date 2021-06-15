@@ -1,0 +1,6 @@
+﻿PS > Start-Process cmd.exe -Verb RunAs
+
+Cmd > powershell "echo $PROFILE" > c:\Windows\Temp\profile_out.txt
+Cmd > set /p PROFILE=<c:\Windows\Temp\profile_out.txt
+Cmd > del %PROFILE%
+Cmd > mklink %PROFILE% "%USERPROFILE%\.dotfiles\powershell\Microsoft.PowerShell_profile.ps1"

@@ -7,14 +7,14 @@ Everything is being done under WSL console.
 
 Track WSL branch as a submodule:
 
-```sh
+```bash
 # Adds "branch = wsl" to .gitmodules (same as "git config -f .gitmodules submodule.wsl.branch wsl")
 /mnt/c/Users/snovvcrash/.dotfiles$ git submodule add https://github.com/snovvcrash/dotfiles-linux wsl
 ```
 
 ## Deploy
 
-```sh
+```bash
 PS > wsl
 
 # Remount with custom options
@@ -60,15 +60,22 @@ PS > wsl
 ~$ curl -ksL https://github.com/snovvcrash/dotfiles-linux/raw/master/00-autoconfig/fzf.sh | bash
 ```
 
-## Update
+## Push
 
-```sh
+```bash
 /mnt/c/Users/snovvcrash/.dotfiles$ cd wsl
 /mnt/c/Users/snovvcrash/.dotfiles/wsl$ git commit -am "Changes in wsl branch of dotfiles-linux"
 /mnt/c/Users/snovvcrash/.dotfiles/wsl$ git push origin wsl
 /mnt/c/Users/snovvcrash/.dotfiles/wsl$ cd ..
 /mnt/c/Users/snovvcrash/.dotfiles$ git commit -am "Changes in master branch of dotfiles-windows"
 /mnt/c/Users/snovvcrash/.dotfiles$ git push origin master
+```
+
+## Pull
+
+```bash
+/mnt/c/Users/snovvcrash/.dotfiles$ git pull
+/mnt/c/Users/snovvcrash/.dotfiles$ git submodule update --remote --merge
 ```
 
 ## Useful links
