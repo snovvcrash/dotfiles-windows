@@ -4,7 +4,7 @@
 	"hot_exit": false,
 	"ignored_packages":
 	[
-		"Vintage"
+		"Vintage",
 	],
 	"scroll_past_end": true,
 	"scroll_speed": 0,
