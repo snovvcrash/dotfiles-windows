@@ -16,8 +16,11 @@
                 "commandline": "powershell.exe -NoLogo",
                 "cursorColor": "#FFFFFF",
                 "cursorShape": "bar",
-                "fontFace": "MesloLGM NF",
-                "fontSize": 10,
+                "font": 
+                {
+                    "face": "MesloLGM NF",
+                    "size": 10
+                },
                 "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
                 "hidden": false,
                 "historySize": 50000,
@@ -25,12 +28,15 @@
                 "padding": "0, 0, 0, 0",
                 "snapOnInput": true,
                 "startingDirectory": "%USERPROFILE%",
-                "useAcrylic": true
+                "useAcrylic": false
             },
             {
                 "commandline": "cmd.exe",
-                "fontFace": "MesloLGM NF",
-                "fontSize": 10,
+                "font": 
+                {
+                    "face": "MesloLGM NF",
+                    "size": 10
+                },
                 "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
                 "hidden": false,
                 "historySize": 50000,
@@ -49,8 +55,11 @@
                 "bellStyle": "none",
                 "colorScheme": "Snazzy",
                 "commandline": "wsl.exe -d Ubuntu",
-                "fontFace": "MesloLGM NF",
-                "fontSize": 10,
+                "font": 
+                {
+                    "face": "MesloLGM NF",
+                    "size": 10
+                },
                 "guid": "{2c4de342-38b7-51cf-b940-2309a097f518}",
                 "hidden": false,
                 "historySize": 50000,

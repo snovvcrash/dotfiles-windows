@@ -115,5 +115,6 @@ PS > wsl
 * [K-Lite Codec Pack](https://codecguide.com/download_kl.htm) (Standard)
 * [VxSrv](https://github.com/ArcticaProject/vcxsrv/releases) (WSL)
 * [Greenshot](https://getgreenshot.org/downloads/)
+* [ShareX](https://getsharex.com/)
 * [Ditto Clipboard Manager](https://ditto-cp.sourceforge.io/)
 * [microsoft/PowerToys](https://github.com/microsoft/PowerToys/releases/)
