@@ -118,3 +118,5 @@ PS > wsl
 * [ShareX](https://getsharex.com/)
 * [Ditto Clipboard Manager](https://ditto-cp.sourceforge.io/)
 * [microsoft/PowerToys](https://github.com/microsoft/PowerToys/releases/)
+* [Proxifier](https://www.proxifier.com/download/)
+* [HeidiSQL](https://www.heidisql.com/download.php)
