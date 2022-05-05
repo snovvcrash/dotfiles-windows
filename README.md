@@ -80,6 +80,8 @@ PS > wsl
 
 ## Useful links
 
+* [Мастерская хакера. Подборка полезных инструментов для Windows и Linux](https://xakep.ru/2021/11/15/hacker-tools-windows-linux/)
+
 ### Terminals
 
 * [microsoft/terminal](https://github.com/microsoft/terminal)
