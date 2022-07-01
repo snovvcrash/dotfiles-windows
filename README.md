@@ -84,8 +84,8 @@ PS > wsl
 
 ### Terminals
 
-* [microsoft/terminal](https://github.com/microsoft/terminal)
 * [cmder](https://cmder.net/)
+* [microsoft/terminal](https://github.com/microsoft/terminal)
 * [wsltty](https://github.com/mintty/wsltty/releases)
 
 ### Widgets
@@ -95,30 +95,31 @@ PS > wsl
 
 ### Personalization
 
-* [QTTabBar](http://qttabbar.wikidot.com/)
 * [Eun/MoveToDesktop](https://github.com/Eun/MoveToDesktop)
+* [QTTabBar](http://qttabbar.wikidot.com/)
 * [Sizer](http://www.brianapps.net/sizer4/)
 * [Winaero Tweaker](https://winaero.com/download.php?view.1796) (Menu Show Delay)
 
 ### Text Editors
 
+* [Obsidian](https://obsidian.md/)
 * [Sublime Text 3](https://www.sublimetext.com/3)
 * [Typora](https://typora.io/)
-* [Obsidian](https://obsidian.md/)
 
 ### Remote Clients
 
-* [Xshell](https://www.netsarang.com/ru/xshell/)
-* [Xftp](https://www.netsarang.com/ru/xftp/)
 * [X2Go Client](https://wiki.x2go.org/doku.php/doc:installation:x2goclient)
+* [Xftp](https://www.netsarang.com/ru/xftp/)
+* [Xshell](https://www.netsarang.com/ru/xshell/)
 
 ### Other
 
-* [K-Lite Codec Pack](https://codecguide.com/download_kl.htm) (Standard)
-* [VxSrv](https://github.com/ArcticaProject/vcxsrv/releases) (WSL)
-* [Greenshot](https://getgreenshot.org/downloads/)
-* [ShareX](https://getsharex.com/)
 * [Ditto Clipboard Manager](https://ditto-cp.sourceforge.io/)
+* [Greenshot](https://getgreenshot.org/downloads/)
+* [HeidiSQL](https://www.heidisql.com/download.php)
+* [K-Lite Codec Pack](https://codecguide.com/download_kl.htm) (Standard)
 * [microsoft/PowerToys](https://github.com/microsoft/PowerToys/releases/)
 * [Proxifier](https://www.proxifier.com/download/)
-* [HeidiSQL](https://www.heidisql.com/download.php)
+* [ShareX](https://getsharex.com/)
+* [TotalRegistry](https://github.com/zodiacon/TotalRegistry/releases)
+* [VxSrv](https://github.com/ArcticaProject/vcxsrv/releases) (WSL)
