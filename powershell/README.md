@@ -21,6 +21,15 @@ Install a Nerd Font that will render Powerline glyphs correctly – [`Meslo LG M
 
 A wide variety of color schemes for Windows Terminal can be found [here](https://windowsterminalthemes.dev/).
 
+## History Based Prediction (PowerShell 7.0+)
+
+Install [Predictive IntelliSense](https://devblogs.microsoft.com/powershell/announcing-psreadline-2-1-with-predictive-intellisense/):
+
+```
+PS > Install-Module PSReadline -Force
+PS > Set-PSReadLineOption -PredictionViewStyle ListView
+```
+
 ## Refs
 
 * [Windows Terminal Powerline Setup / Microsoft Docs](https://docs.microsoft.com/en-us/windows/terminal/tutorials/powerline-setup)
