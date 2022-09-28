@@ -85,7 +85,7 @@ PS > wsl
 ### Terminals
 
 * [cmder](https://cmder.net/)
-* [microsoft/terminal](https://github.com/microsoft/terminal)
+* [microsoft/terminal](https://github.com/microsoft/terminal) · [Themes](https://windowsterminalthemes.dev/)
 * [wsltty](https://github.com/mintty/wsltty/releases)
 
 ### Widgets
