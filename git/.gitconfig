@@ -10,7 +10,7 @@
 	helper = manager
 
 [core]
-	editor = \"E:\\Programs\\Sublime Text 3\\sublime_text.exe\" -w
+	editor = \"E:\\Programs\\Sublime Text 3\\subl.exe\" -w
 	autocrlf = true
 	# safecrlf = true
 
