@@ -7,7 +7,7 @@
 	signingkey = snovvcrash@protonmail.ch
 
 [credential]
-	helper = manager
+	helper = wincred
 
 [core]
 	editor = \"E:\\Programs\\Sublime Text 3\\subl.exe\" -w
