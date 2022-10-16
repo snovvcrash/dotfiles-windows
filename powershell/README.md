@@ -30,6 +30,10 @@ PS > Install-Module PSReadline -Force
 PS > Set-PSReadLineOption -PredictionViewStyle ListView
 ```
 
+## PSFzf
+
+- https://www.powershellgallery.com/packages/PSFzf
+
 ## Refs
 
 * [Windows Terminal Powerline Setup / Microsoft Docs](https://docs.microsoft.com/en-us/windows/terminal/tutorials/powerline-setup)
