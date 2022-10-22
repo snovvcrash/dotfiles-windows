@@ -7,6 +7,9 @@
 if ($host.Name -eq 'ConsoleHost')
 {
     Import-Module PSReadLine
+    
+    # Remove single command length limit (PowerShell 7+)
+    Set-PSReadLineOption -AddToHistoryHandler $null
 
     # Binding for moving through history by prefix
     Set-PSReadLineKeyHandler -Key UpArrow -Function HistorySearchBackward
