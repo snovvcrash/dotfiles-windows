@@ -30,7 +30,7 @@ PS > Install-Module PSReadline -Force
 PS > Set-PSReadLineOption -PredictionViewStyle {ListView,InlineView}
 ```
 
-The `ListView` is similar to [PSFzf](https://www.powershellgallery.com/packages/PSFzf)
+The `ListView` is similar to [PSFzf](https://www.powershellgallery.com/packages/PSFzf).
 
 ## Refs
 
