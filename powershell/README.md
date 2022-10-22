@@ -1,6 +1,8 @@
 PowerShell
 ==========
 
+## Oh My Posh
+
 Install modules:
 
 ```powershell
@@ -21,18 +23,24 @@ Install a Nerd Font that will render Powerline glyphs correctly – [`Meslo LG M
 
 A wide variety of color schemes for Windows Terminal can be found [here](https://windowsterminalthemes.dev/).
 
-## History Based Prediction (PowerShell 7.0+)
+## Better History Navigation
 
-Install [Predictive IntelliSense](https://devblogs.microsoft.com/powershell/announcing-psreadline-2-1-with-predictive-intellisense/):
+Install [Predictive IntelliSense](https://devblogs.microsoft.com/powershell/announcing-psreadline-2-1-with-predictive-intellisense/) (History Based Prediction in PowerShell 7.0+):
 
 ```
-PS > Install-Module PSReadline -Force
-PS > Set-PSReadLineOption -PredictionViewStyle {ListView,InlineView}
+PS > Install-Module PSReadLine -AllowPrerelease -Force
 ```
 
-The `ListView` is similar to [PSFzf](https://www.powershellgallery.com/packages/PSFzf).
+Install [PSFzf](https://www.powershellgallery.com/packages/PSFzf):
+
+```
+PS > choco install fzf
+PS > Install-Module PSFzf -Force
+```
 
 ## Refs
 
 * [Windows Terminal Powerline Setup / Microsoft Docs](https://docs.microsoft.com/en-us/windows/terminal/tutorials/powerline-setup)
+* [PowerShell modules for a better command line / Damir's Corner](https://www.damirscorner.com/blog/posts/20211119-PowerShellModulesForABetterCommandLine.html)
+* [Powershell – How to install the Nuget provider for PowerShell on a offline machine / iTecNote](https://itecnote.com/tecnote/powershell-how-to-install-the-nuget-provider-for-powershell-on-a-offline-machine/)
 * [Installing a .nupkg on an offline machine / Nathan Manzi's Blog](https://nmanzi.com/blog/installing-nupkg-offline/)
