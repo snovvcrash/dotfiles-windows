@@ -27,13 +27,12 @@ Install [Predictive IntelliSense](https://devblogs.microsoft.com/powershell/anno
 
 ```
 PS > Install-Module PSReadline -Force
-PS > Set-PSReadLineOption -PredictionViewStyle ListView
+PS > Set-PSReadLineOption -PredictionViewStyle {ListView,InlineView}
 ```
 
-## PSFzf
-
-- https://www.powershellgallery.com/packages/PSFzf
+The `ListView` is similar to [PSFzf](https://www.powershellgallery.com/packages/PSFzf)
 
 ## Refs
 
 * [Windows Terminal Powerline Setup / Microsoft Docs](https://docs.microsoft.com/en-us/windows/terminal/tutorials/powerline-setup)
+* [Installing a .nupkg on an offline machine / Nathan Manzi's Blog](https://nmanzi.com/blog/installing-nupkg-offline/)
