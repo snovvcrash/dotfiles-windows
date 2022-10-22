@@ -25,7 +25,7 @@ A wide variety of color schemes for Windows Terminal can be found [here](https:/
 
 ## Better History Navigation
 
-Install [Predictive IntelliSense](https://devblogs.microsoft.com/powershell/announcing-psreadline-2-1-with-predictive-intellisense/) (History Based Prediction in PowerShell 7.0+):
+Install [Predictive IntelliSense](https://devblogs.microsoft.com/powershell/announcing-psreadline-2-1-with-predictive-intellisense/) (History Based Prediction in PowerShell 7+):
 
 ```
 PS > Install-Module PSReadLine -AllowPrerelease -Force
