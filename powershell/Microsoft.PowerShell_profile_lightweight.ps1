@@ -1,7 +1,3 @@
-# -- Terminal-Icons --------------------------------------------------
-
-#Import-Module -Name Terminal-Icons
-
 # -- PSReadLine ------------------------------------------------------
 
 if ($host.Name -eq 'ConsoleHost')
