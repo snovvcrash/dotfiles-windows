@@ -8,8 +8,8 @@ if ($host.Name -eq 'ConsoleHost')
     Set-PSReadLineOption -AddToHistoryHandler $null
 
     # Binding for moving through history by prefix
-    Set-PSReadLineKeyHandler -Key UpArrow -Function HistorySearchBackward
-    Set-PSReadLineKeyHandler -Key DownArrow -Function HistorySearchForward
+    #Set-PSReadLineKeyHandler -Key UpArrow -Function HistorySearchBackward
+    #Set-PSReadLineKeyHandler -Key DownArrow -Function HistorySearchForward
 }
 
 # -- PSFzf -----------------------------------------------------------
