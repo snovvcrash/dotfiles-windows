@@ -38,6 +38,13 @@ PS > choco install fzf
 PS > Install-Module PSFzf -Force
 ```
 
+## Local PSRepository
+
+```
+PS > Register-PSRepository -Name Local -SourceLocation C:\Windows\System32\WindowsPowerShell\v1.0\Packages -InstallationPolicy Trusted
+PS > Install-Module -Name PSFzf -Repository Local -Force
+```
+
 ## Refs
 
 * [Windows Terminal Powerline Setup / Microsoft Docs](https://docs.microsoft.com/en-us/windows/terminal/tutorials/powerline-setup)
