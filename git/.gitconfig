@@ -11,6 +11,7 @@
 
 [core]
 	editor = \"E:\\Programs\\Sublime Text 3\\subl.exe\" -w
+	filemode = false
 	autocrlf = true
 	# safecrlf = true
 
