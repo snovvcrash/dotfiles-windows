@@ -115,7 +115,7 @@ PS > wsl
 ### Other
 
 * [Ditto Clipboard Manager](https://ditto-cp.sourceforge.io/)
-* [Greenshot](https://getgreenshot.org/downloads/)
+* [Greenshot](https://getgreenshot.org/downloads/) + [Disable](https://getgreenshot.org/faq/how-remove-plugins-or-destinations-from-greenshot/) Imgur plugin
 * [HeidiSQL](https://www.heidisql.com/download.php)
 * [K-Lite Codec Pack](https://codecguide.com/download_kl.htm) (Standard)
 * [microsoft/PowerToys](https://github.com/microsoft/PowerToys/releases/)
