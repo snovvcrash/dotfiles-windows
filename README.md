@@ -78,7 +78,7 @@ PS > wsl
 /mnt/c/Users/snovvcrash/.dotfiles$ git submodule update --remote --merge
 ```
 
-## Useful links
+## Useful Links
 
 * [Мастерская хакера. Подборка полезных инструментов для Windows и Linux](https://xakep.ru/2021/11/15/hacker-tools-windows-linux/)
 
