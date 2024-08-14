@@ -82,6 +82,14 @@ PS > wsl
 
 * [Мастерская хакера. Подборка полезных инструментов для Windows и Linux](https://xakep.ru/2021/11/15/hacker-tools-windows-linux/)
 
+### Activation
+
+* [https://github.com/massgravel/Microsoft-Activation-Scripts](https://github.com/massgravel/Microsoft-Activation-Scripts)
+
+### Debloat
+
+* [Win11Debloat](https://github.com/Raphire/Win11Debloat)
+
 ### Terminals
 
 * [cmder](https://cmder.net/)
