@@ -81,6 +81,7 @@ PS > wsl
 ## Useful Links
 
 * [Мастерская хакера. Подборка полезных инструментов для Windows и Linux](https://xakep.ru/2021/11/15/hacker-tools-windows-linux/)
+* [Console Cowboys: Navigating the Modern Terminal Frontier](https://trustedsec.com/blog/console-cowboys-navigating-the-modern-terminal-frontier)
 
 ### Activation
 
