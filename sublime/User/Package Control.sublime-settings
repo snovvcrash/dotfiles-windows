@@ -17,6 +17,7 @@
 		"Monokai - Spacegray",
 		"Monokai Extended",
 		"Monokai++",
+		"NASM x86 Assembly",
 		"NimLime",
 		"Package Control",
 		"PackageResourceViewer",
@@ -28,6 +29,7 @@
 		"SFTP",
 		"SublimeREPL",
 		"Theme - Monokai+",
-		"Theme - Seti Monokai"
+		"Theme - Seti Monokai",
+		"Whitespace",
 	],
 }
