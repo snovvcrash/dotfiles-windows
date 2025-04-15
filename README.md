@@ -85,7 +85,7 @@ PS > wsl
 
 ### Activation
 
-* [https://github.com/massgravel/Microsoft-Activation-Scripts](https://github.com/massgravel/Microsoft-Activation-Scripts)
+* [massgravel/Microsoft-Activation-Scripts](https://github.com/massgravel/Microsoft-Activation-Scripts)
 
 ### Debloat
 
@@ -95,11 +95,11 @@ PS > wsl
 
 * [cmder](https://cmder.net/)
 * [microsoft/terminal](https://github.com/microsoft/terminal) · [Themes](https://windowsterminalthemes.dev/)
-* [wsltty](https://github.com/mintty/wsltty/releases)
+* [mintty/wsltty](https://github.com/mintty/wsltty/releases)
 
 ### Widgets
 
-* [Enigma (Rainmeter)](https://github.com/Kaelri/Enigma) + Fix LAN display [issue](https://github.com/Kaelri/Enigma/issues/73)
+* [Kaelri/Enigma (Rainmeter)](https://github.com/Kaelri/Enigma) + Fix LAN display [issue](https://github.com/Kaelri/Enigma/issues/73)
 * [Winstep Nexus](https://www.winstep.net/nexus.asp)
 
 ### Personalization
@@ -114,6 +114,14 @@ PS > wsl
 * [Obsidian](https://obsidian.md/)
 * [Sublime Text 3](https://www.sublimetext.com/3)
 * [Typora](https://typora.io/)
+
+### IDEs
+
+#### Visual Studio
+
+* [VSColorOutput64](https://marketplace.visualstudio.com/items?itemName=MikeWard-AnnArbor.VSColorOutput64)
+* [Visual Assist](https://www.wholetomato.com/)
+* [vogeljo/reset-vassistx](https://github.com/vogeljo/reset-vassistx)
 
 ### Remote Clients
 
@@ -130,5 +138,5 @@ PS > wsl
 * [microsoft/PowerToys](https://github.com/microsoft/PowerToys/releases/)
 * [Proxifier](https://www.proxifier.com/download/)
 * [ShareX](https://getsharex.com/)
-* [TotalRegistry](https://github.com/zodiacon/TotalRegistry/releases)
-* [VxSrv](https://github.com/ArcticaProject/vcxsrv/releases) (WSL)
+* [zodiacon/TotalRegistry](https://github.com/zodiacon/TotalRegistry/releases)
+* [ArcticaProject/vcxsrv](https://github.com/ArcticaProject/vcxsrv/releases) (WSL)
