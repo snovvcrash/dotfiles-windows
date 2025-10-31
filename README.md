@@ -140,3 +140,4 @@ PS > wsl
 * [ShareX](https://getsharex.com/)
 * [zodiacon/TotalRegistry](https://github.com/zodiacon/TotalRegistry/releases)
 * [ArcticaProject/vcxsrv](https://github.com/ArcticaProject/vcxsrv/releases) (WSL)
+* [MinerSearch](https://github.com/BlendLog/MinerSearch)
