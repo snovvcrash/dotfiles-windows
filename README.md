@@ -90,6 +90,7 @@ PS > wsl
 ### Debloat
 
 * [Win11Debloat](https://github.com/Raphire/Win11Debloat)
+* [RemoveWindowsAI](https://github.com/zoicware/RemoveWindowsAI)
 
 ### Terminals
 
