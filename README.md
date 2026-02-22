@@ -106,7 +106,7 @@ PS > wsl
 ### Personalization
 
 * [Eun/MoveToDesktop](https://github.com/Eun/MoveToDesktop)
-* [QTTabBar](https://rsload.net/soft/desktop/14180-qttabbar.html)
+* [QTTabBar](https://rsload.net/soft/desktop/14180-qttabbar.html) or [Files](https://files.community/)
 * [Sizer](http://www.brianapps.net/sizer4/)
 * [Winaero Tweaker](https://winaero.com/download.php?view.1796) (Menu Show Delay)
 
