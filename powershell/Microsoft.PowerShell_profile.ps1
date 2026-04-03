@@ -1,30 +1,52 @@
-# -- aliases ---------------------------------------------------------
+# subl.exe $PROFILE
+
+# -- PSReadLine ------------------------------------------------------
+
+if ($host.Name -eq 'ConsoleHost')
+{
+    Import-Module PSReadLine
+
+    # Remove single command length limit (PowerShell 7+)
+    Set-PSReadLineOption -AddToHistoryHandler $null
+
+    # Complete predictions by delimiters
+    Set-PSReadLineKeyHandler -Key Ctrl+RightArrow -Function ForwardWord
+    Set-PSReadLineKeyHandler -Key Ctrl+LeftArrow -Function BackwardWord
+    # Binding for moving through history by prefix
+    #Set-PSReadLineKeyHandler -Key UpArrow -Function HistorySearchBackward
+    #Set-PSReadLineKeyHandler -Key DownArrow -Function HistorySearchForward
+
+    # ^D is exit
+    Set-PSReadLineKeyHandler -Key Ctrl+d -Function DeleteCharOrExit
+    # ^E is go to end of line
+    Set-PSReadLineKeyHandler -Key Ctrl+e -Function EndOfLine
+
+    # Cursor is not blinking
+    Set-PSReadLineOption -ExtraPromptLineCount 0
+    [Console]::Write("`e[2 q")
+}
+
+# -- Aliases ---------------------------------------------------------
 
 # Git
 
 Function GitStatus {git status $args}
-Set-Alias -Name gits -Value GitStatus
+Set-Alias -Name gs -Value GitStatus
 
 Function GitAdd {git add $args}
-Set-Alias -Name gita -Value GitAdd
-
-Function GitBranch {git branch $args}
-Set-Alias -Name gitb -Value GitBranch
-
-Function GitCommit {git commit $args}
-Set-Alias -Name gitc -Value GitCommit
+Set-Alias -Name ga -Value GitAdd
 
 Function GitDiff {git diff $args}
-Set-Alias -Name gitd -Value GitDiff
+Set-Alias -Name gd -Value GitDiff
 
-Function GitCheckout {git checkout $args}
-Set-Alias -Name gito -Value GitCheckout
+# -- PSFzf -----------------------------------------------------------
 
-# -- posh-git --------------------------------------------------------
+#Install-Module PSFzf
+#winget upgrade junegunn.fzf
+Import-Module PSFzf
 
-Import-Module posh-git
+# Override PSReadLine's history search
+Set-PsFzfOption -PSReadlineChordProvider 'Ctrl+t' -PSReadlineChordReverseHistory 'Ctrl+r'
 
-# -- oh-my-posh ------------------------------------------------------
-
-Import-Module oh-my-posh
-Set-PoshPrompt -Theme mt
+# Override default tab completion
+Set-PSReadLineKeyHandler -Key Tab -ScriptBlock { Invoke-FzfTabCompletion }
