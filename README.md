@@ -82,6 +82,7 @@ PS > wsl
 
 * [Мастерская хакера. Подборка полезных инструментов для Windows и Linux](https://xakep.ru/2021/11/15/hacker-tools-windows-linux/)
 * [Console Cowboys: Navigating the Modern Terminal Frontier](https://trustedsec.com/blog/console-cowboys-navigating-the-modern-terminal-frontier)
+* [БУСТИМ Windows 11 по максимуму](https://t.me/bugnotfeature/22652)
 
 ### Activation
 
@@ -107,7 +108,7 @@ PS > wsl
 
 * [Eun/MoveToDesktop](https://github.com/Eun/MoveToDesktop)
 * [QTTabBar](https://rsload.net/soft/desktop/14180-qttabbar.html) or [Files](https://files.community/)
-* [Sizer](http://www.brianapps.net/sizer4/)
+* [Sizer](http://www.brianapps.net/sizer4/), [AltSnap](https://github.com/RamonUnch/AltSnap)
 * [Winaero Tweaker](https://winaero.com/download.php?view.1796) (Menu Show Delay)
 
 ### Text Editors
@@ -141,4 +142,5 @@ PS > wsl
 * [ShareX](https://getsharex.com/)
 * [zodiacon/TotalRegistry](https://github.com/zodiacon/TotalRegistry/releases)
 * [ArcticaProject/vcxsrv](https://github.com/ArcticaProject/vcxsrv/releases) (WSL)
-* [MinerSearch](https://github.com/BlendLog/MinerSearch)
+* [MinerSearch](https://github.com/BlendLog/MinerSearch), [Emsisoft Emergency Kit](https://www.emsisoft.com/en/home/emergency-kit/)
+* [GlassWire](https://www.glasswire.com/download/)
