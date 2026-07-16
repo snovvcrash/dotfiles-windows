@@ -92,12 +92,14 @@ PS > wsl
 
 * [Win11Debloat](https://github.com/Raphire/Win11Debloat)
 * [RemoveWindowsAI](https://github.com/zoicware/RemoveWindowsAI)
+* [GDID-Disabler](https://github.com/SmtimesIWndr/GDID-Disabler)
 
 ### Terminals
 
 * [cmder](https://cmder.net/)
 * [microsoft/terminal](https://github.com/microsoft/terminal) · [Themes](https://windowsterminalthemes.dev/)
 * [mintty/wsltty](https://github.com/mintty/wsltty/releases)
+* [Nushell](https://www.nushell.sh/)
 
 ### Widgets
 
