@@ -133,6 +133,10 @@ PS > wsl
 * [Xftp](https://www.netsarang.com/ru/xftp/)
 * [Xshell](https://www.netsarang.com/ru/xshell/)
 
+### Fixes
+
+* [Washed out Cursor Fix](https://github.com/Anakin-bb8/washed-out-cursor-fix) · [Thread](https://www.reddit.com/r/AMDHelp/comments/zfp6oh/windows_10_cursor_appears_washed_out_since/)
+
 ### Other
 
 * [Ditto Clipboard Manager](https://ditto-cp.sourceforge.io/)
