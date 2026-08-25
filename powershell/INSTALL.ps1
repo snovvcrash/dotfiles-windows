@@ -6,9 +6,12 @@ New-Item -ItemType SymbolicLink -Path $PROFILE -Target "$HOME\.dotfiles\powershe
 # -- WinGet ---------------------------------------------------------
 
 ## psmux
-
 winget install psmux
 winget install pstop
 winget install psnet
 winget install marlocarlo.omp-manager
 winget install marlocarlo.tmuxpanel
+## dig
+winget install ISC.BIND
+## rg (ripgrep)
+winget install BurntSushi.ripgrep.MSVC
