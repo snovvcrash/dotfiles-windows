@@ -90,9 +90,9 @@ PS > wsl
 
 ### Debloat
 
-* [Win11Debloat](https://github.com/Raphire/Win11Debloat)
-* [RemoveWindowsAI](https://github.com/zoicware/RemoveWindowsAI)
-* [GDID-Disabler](https://github.com/SmtimesIWndr/GDID-Disabler)
+* [Raphire/Win11Debloat](https://github.com/Raphire/Win11Debloat)
+* [zoicware/RemoveWindowsAI](https://github.com/zoicware/RemoveWindowsAI)
+* [SmtimesIWndr/GDID-Disabler](https://github.com/SmtimesIWndr/GDID-Disabler)
 
 ### Terminals
 
@@ -101,17 +101,20 @@ PS > wsl
 * [mintty/wsltty](https://github.com/mintty/wsltty/releases)
 * [Nushell](https://www.nushell.sh/)
 
-### Widgets
+### Customization / Tweakers
+
+* [microsoft/PowerToys](https://github.com/microsoft/PowerToys/releases/)
+* [Windhawk](https://windhawk.net/)
+* [Winaero Tweaker](https://winaero.com/download.php?view.1796) (Menu Show Delay)
+* [QTTabBar](https://rsload.net/soft/desktop/14180-qttabbar.html) or [Files](https://files.community/)
+* [Eun/MoveToDesktop](https://github.com/Eun/MoveToDesktop)
+* [Sizer](http://www.brianapps.net/sizer4/)
+* [RamonUnch/AltSnap](https://github.com/RamonUnch/AltSnap)
+
+#### Widgets
 
 * [Kaelri/Enigma (Rainmeter)](https://github.com/Kaelri/Enigma) + Fix LAN display [issue](https://github.com/Kaelri/Enigma/issues/73)
 * [Winstep Nexus](https://www.winstep.net/nexus.asp)
-
-### Personalization
-
-* [Eun/MoveToDesktop](https://github.com/Eun/MoveToDesktop)
-* [QTTabBar](https://rsload.net/soft/desktop/14180-qttabbar.html) or [Files](https://files.community/)
-* [Sizer](http://www.brianapps.net/sizer4/), [AltSnap](https://github.com/RamonUnch/AltSnap)
-* [Winaero Tweaker](https://winaero.com/download.php?view.1796) (Menu Show Delay)
 
 ### Text Editors
 
@@ -133,20 +136,23 @@ PS > wsl
 * [Xftp](https://www.netsarang.com/ru/xftp/)
 * [Xshell](https://www.netsarang.com/ru/xshell/)
 
+### Security
+
+* [BlendLog/MinerSearch](https://github.com/BlendLog/MinerSearch)
+* [Emsisoft Emergency Kit](https://www.emsisoft.com/en/home/emergency-kit/)
+* [GlassWire](https://www.glasswire.com/download/)
+
 ### Fixes
 
-* [Washed out Cursor Fix](https://github.com/Anakin-bb8/washed-out-cursor-fix) · [Thread](https://www.reddit.com/r/AMDHelp/comments/zfp6oh/windows_10_cursor_appears_washed_out_since/)
+* [Anakin-bb8/Washed out Cursor Fix](https://github.com/Anakin-bb8/washed-out-cursor-fix) · [Thread](https://www.reddit.com/r/AMDHelp/comments/zfp6oh/windows_10_cursor_appears_washed_out_since/)
 
 ### Other
 
+* [K-Lite Codec Pack](https://codecguide.com/download_kl.htm) (Standard)
 * [Ditto Clipboard Manager](https://ditto-cp.sourceforge.io/)
 * [Greenshot](https://getgreenshot.org/downloads/) + [Disable](https://getgreenshot.org/faq/how-remove-plugins-or-destinations-from-greenshot/) Imgur plugin
-* [HeidiSQL](https://www.heidisql.com/download.php)
-* [K-Lite Codec Pack](https://codecguide.com/download_kl.htm) (Standard)
-* [microsoft/PowerToys](https://github.com/microsoft/PowerToys/releases/)
-* [Proxifier](https://www.proxifier.com/download/)
 * [ShareX](https://getsharex.com/)
+* [HeidiSQL](https://www.heidisql.com/download.php)
+* [Proxifier](https://www.proxifier.com/download/)
 * [zodiacon/TotalRegistry](https://github.com/zodiacon/TotalRegistry/releases)
 * [ArcticaProject/vcxsrv](https://github.com/ArcticaProject/vcxsrv/releases) (WSL)
-* [MinerSearch](https://github.com/BlendLog/MinerSearch), [Emsisoft Emergency Kit](https://www.emsisoft.com/en/home/emergency-kit/)
-* [GlassWire](https://www.glasswire.com/download/)
