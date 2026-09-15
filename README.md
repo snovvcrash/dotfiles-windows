@@ -110,6 +110,7 @@ PS > wsl
 * [Eun/MoveToDesktop](https://github.com/Eun/MoveToDesktop)
 * [Sizer](http://www.brianapps.net/sizer4/)
 * [RamonUnch/AltSnap](https://github.com/RamonUnch/AltSnap)
+* [BluePointLilac/ContextMenuManager](https://github.com/BluePointLilac/ContextMenuManager)
 
 #### Widgets
 
