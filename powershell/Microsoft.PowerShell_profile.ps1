@@ -18,7 +18,9 @@ if ($host.Name -eq 'ConsoleHost')
 
     # ^D is exit
     Set-PSReadLineKeyHandler -Key Ctrl+d -Function DeleteCharOrExit
-    # ^E is go to end of line
+    # ^A is go to beginning of line
+    Set-PSReadLineKeyHandler -Key Ctrl+a -Function BeginningOfLine
+    # ^E is go to the end of line
     Set-PSReadLineKeyHandler -Key Ctrl+e -Function EndOfLine
 
     # Cursor is not blinking
