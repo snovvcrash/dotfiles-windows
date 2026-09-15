@@ -18,7 +18,7 @@ if ($host.Name -eq 'ConsoleHost')
 
     # ^D is exit
     Set-PSReadLineKeyHandler -Key Ctrl+d -Function DeleteCharOrExit
-    # ^A is go to beginning of line
+    # ^A is go to the beginning of line
     Set-PSReadLineKeyHandler -Key Ctrl+a -Function BeginningOfLine
     # ^E is go to the end of line
     Set-PSReadLineKeyHandler -Key Ctrl+e -Function EndOfLine
