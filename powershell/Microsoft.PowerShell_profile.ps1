@@ -52,3 +52,24 @@ Set-PsFzfOption -PSReadlineChordProvider 'Ctrl+t' -PSReadlineChordReverseHistory
 
 # Override default tab completion
 Set-PSReadLineKeyHandler -Key Tab -ScriptBlock { Invoke-FzfTabCompletion }
+
+# -- ArgumentCompleter -----------------------------------------------
+
+function Get-SSHHosts {
+    $configFile = "$env:USERPROFILE\.ssh\config"
+    if (Test-Path $configFile) {
+        Get-Content $configFile | 
+            Select-String -Pattern "^Host\s+(.+)$" | 
+            ForEach-Object { $_.Matches.Groups[1].Value.Split(' ') } |
+            Where-Object { $_ -notmatch '[*?]' } |
+            Sort-Object -Unique
+    }
+}
+
+Register-ArgumentCompleter -CommandName ssh, scp, sftp -Native -ScriptBlock {
+    param($wordToComplete, $commandAst, $cursorPosition)
+    $hosts = Get-SSHHosts
+    $hosts | Where-Object { $_ -like "$wordToComplete*" } | ForEach-Object {
+        [System.Management.Automation.CompletionResult]::new($_, $_, 'ParameterValue', $_)
+    }
+}
