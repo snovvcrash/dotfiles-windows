@@ -13,8 +13,9 @@ if ($host.Name -eq 'ConsoleHost')
     Set-PSReadLineKeyHandler -Key Ctrl+RightArrow -Function ForwardWord
     Set-PSReadLineKeyHandler -Key Ctrl+LeftArrow -Function BackwardWord
     # Binding for moving through history by prefix
-    #Set-PSReadLineKeyHandler -Key UpArrow -Function HistorySearchBackward
-    #Set-PSReadLineKeyHandler -Key DownArrow -Function HistorySearchForward
+    Set-PSReadLineKeyHandler -Key UpArrow -Function HistorySearchBackward
+    Set-PSReadLineKeyHandler -Key DownArrow -Function HistorySearchForward
+    Set-PSReadLineOption -HistorySearchCursorMovesToEnd:$true
 
     # ^D is exit
     Set-PSReadLineKeyHandler -Key Ctrl+d -Function DeleteCharOrExit
