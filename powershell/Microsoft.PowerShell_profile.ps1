@@ -17,12 +17,18 @@ if ($host.Name -eq 'ConsoleHost')
     Set-PSReadLineKeyHandler -Key DownArrow -Function HistorySearchForward
     Set-PSReadLineOption -HistorySearchCursorMovesToEnd:$true
 
+    # ^C is cancel line
+    Set-PSReadLineKeyHandler -Key 'Ctrl+c' -ScriptBlock { [Microsoft.PowerShell.PSConsoleReadLine]::CancelLine() }
+    Set-PSReadLineKeyHandler -Key 'Ctrl+с' -ScriptBlock { [Microsoft.PowerShell.PSConsoleReadLine]::CancelLine() }
     # ^D is exit
     Set-PSReadLineKeyHandler -Key Ctrl+d -Function DeleteCharOrExit
+    Set-PSReadLineKeyHandler -Key Ctrl+в -Function DeleteCharOrExit
     # ^A is go to the beginning of line
     Set-PSReadLineKeyHandler -Key Ctrl+a -Function BeginningOfLine
+    Set-PSReadLineKeyHandler -Key Ctrl+ф -Function BeginningOfLine
     # ^E is go to the end of line
     Set-PSReadLineKeyHandler -Key Ctrl+e -Function EndOfLine
+    Set-PSReadLineKeyHandler -Key Ctrl+у -Function EndOfLine
 
     # Cursor is not blinking
     Set-PSReadLineOption -ExtraPromptLineCount 0
