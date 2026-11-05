@@ -1,10 +1,21 @@
-# -- PSReadLine ------------------------------------------------------
+# -- PSReadLine ----------------------------------------------------------------
 
 if ($host.Name -eq 'ConsoleHost')
 {
     Import-Module PSReadLine
 
-    # -- Always start the tab in the EN layout -----------------------
+    # Remove single command length limit (PowerShell 7+)
+    Set-PSReadLineOption -AddToHistoryHandler $null
+
+    # Complete predictions by delimiters
+    Set-PSReadLineKeyHandler -Key Ctrl+RightArrow -Function ForwardWord
+    Set-PSReadLineKeyHandler -Key Ctrl+LeftArrow -Function BackwardWord
+    # Binding for moving through history by prefix
+    Set-PSReadLineKeyHandler -Key UpArrow -Function HistorySearchBackward
+    Set-PSReadLineKeyHandler -Key DownArrow -Function HistorySearchForward
+    Set-PSReadLineOption -HistorySearchCursorMovesToEnd:$true
+
+    # -- Always start the tab in the EN layout ---------------------------------
     # PSReadLine 2.4.5 bug (github.com/PowerShell/PSReadLine/issues/1393): if the
     # session's first keypresses happen under the RU layout, Ctrl+key chords are
     # mistranslated for the whole session (Ctrl+D inserts "^D"). Sessions that
@@ -30,17 +41,6 @@ if ($host.Name -eq 'ConsoleHost')
         }
     }
 
-    # Remove single command length limit (PowerShell 7+)
-    Set-PSReadLineOption -AddToHistoryHandler $null
-
-    # Complete predictions by delimiters
-    Set-PSReadLineKeyHandler -Key Ctrl+RightArrow -Function ForwardWord
-    Set-PSReadLineKeyHandler -Key Ctrl+LeftArrow -Function BackwardWord
-    # Binding for moving through history by prefix
-    Set-PSReadLineKeyHandler -Key UpArrow -Function HistorySearchBackward
-    Set-PSReadLineKeyHandler -Key DownArrow -Function HistorySearchForward
-    Set-PSReadLineOption -HistorySearchCursorMovesToEnd:$true
-
     # ^C is cancel line
     Set-PSReadLineKeyHandler -Key 'Ctrl+c','Ctrl+с' -Function CancelLine
     # ^D is exit
@@ -53,9 +53,63 @@ if ($host.Name -eq 'ConsoleHost')
     # Cursor is not blinking
     Set-PSReadLineOption -ExtraPromptLineCount 0
     [Console]::Write("`e[2 q")
+
+    # -- PSFzf -----------------------------------------------------------------
+
+    #Install-Module PSFzf
+    #winget upgrade junegunn.fzf
+    Import-Module PSFzf
+
+    # Override PSReadLine's history search
+    Set-PsFzfOption -PSReadlineChordProvider 'Ctrl+t' -PSReadlineChordReverseHistory 'Ctrl+r'
+    # Cyrillic twins for the same physical keys under RU
+    Set-PSReadLineKeyHandler -Key 'Ctrl+е','Shift+Ctrl+е' -ScriptBlock { Invoke-FzfPsReadlineHandlerProvider }
+    Set-PSReadLineKeyHandler -Key 'Ctrl+к','Shift+Ctrl+к' -ScriptBlock { Invoke-FzfPsReadlineHandlerHistory }
+
+    # Override default tab completion
+    # PSFzf appends a space to non-directory completions even mid-line, which
+    # doubles up when a space already follows the cursor - collapse it.
+    Set-PSReadLineKeyHandler -Key Tab -ScriptBlock {
+        $lineBefore = $null; $cursorBefore = 0
+        [Microsoft.PowerShell.PSConsoleReadLine]::GetBufferState([ref]$lineBefore, [ref]$cursorBefore)
+        Invoke-FzfTabCompletion
+        $line = $null; $cursor = 0
+        [Microsoft.PowerShell.PSConsoleReadLine]::GetBufferState([ref]$line, [ref]$cursor)
+        if ($line -ne $lineBefore -and
+            $cursor -gt 0 -and $cursor -lt $line.Length -and
+            $line[$cursor] -eq ' ' -and $line[$cursor - 1] -eq ' ') {
+            [Microsoft.PowerShell.PSConsoleReadLine]::BackwardDeleteChar()
+        }
+    }
+
+    # -- Ctrl-key mirror for the RU layout -------------------------------------
+    # KEEP THIS LAST: it snapshots the current bindings and copies every
+    # Ctrl+<latin> FUNCTION binding onto the Cyrillic twin of the same
+    # physical key (w=ц, x=ч, z=я, v=м, r=к, t=е, s=ы, l=д, y=н ...) so
+    # hotkeys keep working while the RU layout is active. Script-bound
+    # handlers (PSFzf) are skipped - their twins are registered explicitly
+    # above, because Get-PSReadLineKeyHandler does not expose scriptblocks.
+    # New Ctrl+letter bindings added after this loop get no Cyrillic twin.
+    $cyrlTwin = @{
+        a='ф'; b='и'; c='с'; d='в'; e='у'; f='а'; g='п'; h='р'; i='ш'; j='о'
+        k='л'; l='д'; m='ь'; n='т'; o='щ'; p='з'; q='й'; r='к'; s='ы'; t='е'
+        u='г'; v='м'; w='ц'; x='ч'; y='н'; z='я'
+    }
+    $fnParam = (Get-Command Set-PSReadLineKeyHandler).Parameters['Function']
+    $validFn = ($fnParam.Attributes |
+        Where-Object { $_ -is [System.Management.Automation.ValidateSetAttribute] }).ValidValues
+    foreach ($h in Get-PSReadLineKeyHandler -Bound) {
+        if ($h.Key -cmatch '^Ctrl\+([a-z])$' -and $validFn -ccontains $h.Function) {
+            $twin = $cyrlTwin[$Matches[1]]
+            if (-not $twin) { continue }
+            foreach ($chord in @("Ctrl+$twin", "Shift+Ctrl+$twin")) {
+                Set-PSReadLineKeyHandler -Key $chord -Function $h.Function
+            }
+        }
+    }
 }
 
-# -- Aliases ---------------------------------------------------------
+# -- Aliases -------------------------------------------------------------------
 
 # Git
 
@@ -68,19 +122,7 @@ Set-Alias -Name ga -Value GitAdd
 Function GitDiff {git diff $args}
 Set-Alias -Name gd -Value GitDiff
 
-# -- PSFzf -----------------------------------------------------------
-
-#Install-Module PSFzf
-#winget upgrade junegunn.fzf
-Import-Module PSFzf
-
-# Override PSReadLine's history search
-Set-PsFzfOption -PSReadlineChordProvider 'Ctrl+t' -PSReadlineChordReverseHistory 'Ctrl+r'
-
-# Override default tab completion
-Set-PSReadLineKeyHandler -Key Tab -ScriptBlock { Invoke-FzfTabCompletion }
-
-# -- ArgumentCompleter -----------------------------------------------
+# -- ArgumentCompleter ---------------------------------------------------------
 
 function Get-SSHHosts {
     $configFile = "$env:USERPROFILE\.ssh\config"
