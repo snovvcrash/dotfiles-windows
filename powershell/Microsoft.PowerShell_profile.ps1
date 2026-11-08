@@ -75,10 +75,16 @@ if ($host.Name -eq 'ConsoleHost')
         Invoke-FzfTabCompletion
         $line = $null; $cursor = 0
         [Microsoft.PowerShell.PSConsoleReadLine]::GetBufferState([ref]$line, [ref]$cursor)
-        if ($line -ne $lineBefore -and
-            $cursor -gt 0 -and $cursor -lt $line.Length -and
-            $line[$cursor] -eq ' ' -and $line[$cursor - 1] -eq ' ') {
-            [Microsoft.PowerShell.PSConsoleReadLine]::BackwardDeleteChar()
+        if ($line -ne $lineBefore) {
+            # PSFzf leaves a doubled space in two cases: mid-line completions
+            # (appends ' ' when a space already follows the cursor), and Ctrl-C
+            # aborts (its empty-output bug replaces the token with a lone ' ',
+            # doubling with the preceding space). Esc-cancels insert nothing.
+            $doubleAtCursor = ($cursor -gt 0 -and $cursor -lt $line.Length -and $line[$cursor] -eq ' ' -and $line[$cursor - 1] -eq ' ')
+            $doubleAtEnd = ($cursor -eq $line.Length -and $line.Length -ge 2 -and $line[$line.Length - 1] -eq ' ' -and $line[$line.Length - 2] -eq ' ')
+            if ($doubleAtCursor -or $doubleAtEnd) {
+                [Microsoft.PowerShell.PSConsoleReadLine]::BackwardDeleteChar()
+            }
         }
     }
 
