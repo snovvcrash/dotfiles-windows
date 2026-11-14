@@ -59,6 +59,7 @@ if ($host.Name -eq 'ConsoleHost')
     #Install-Module PSFzf
     #winget upgrade junegunn.fzf
     Import-Module PSFzf
+    $env:FZF_DEFAULT_OPTS = '--no-height'
 
     # Override PSReadLine's history search
     Set-PsFzfOption -PSReadlineChordProvider 'Ctrl+t' -PSReadlineChordReverseHistory 'Ctrl+r'
@@ -113,6 +114,27 @@ if ($host.Name -eq 'ConsoleHost')
             }
         }
     }
+
+    # -- History (all sessions) --------------------------------------------
+    Remove-Item Alias:history -ErrorAction SilentlyContinue
+    function history {
+        [CmdletBinding()]
+        param(
+            [Parameter(Position = 0)][int]$Last = 0,
+            [switch]$Plain
+        )
+        $path = (Get-PSReadLineOption).HistorySavePath
+        if (-not (Test-Path $path)) { return }
+        $every = @(Get-Content $path)
+        $total = $every.Count
+        $lines = if ($Last -gt 0 -and $total -gt $Last) { @($every[($total - $Last)..($total - 1)]) }
+                 else { $every }
+        if ($Plain) { return $lines }
+        $start = $total - $lines.Count + 1
+        for ($i = 0; $i -lt $lines.Count; $i++) {
+            '{0,6}  {1}' -f ($start + $i), $lines[$i]
+        }
+    }
 }
 
 # -- Aliases -------------------------------------------------------------------
@@ -127,6 +149,11 @@ Set-Alias -Name ga -Value GitAdd
 
 Function GitDiff {git diff $args}
 Set-Alias -Name gd -Value GitDiff
+
+# Sublime Text
+
+Function SublText {subl $args}
+Set-Alias -Name s -Value SublText
 
 # -- ArgumentCompleter ---------------------------------------------------------
 
